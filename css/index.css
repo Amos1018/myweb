@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+/*全局统一设置*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+ul,li {
+	list-style: none;
+}
+
+/*定义网络字体*/
+@font-face {
+	font-family:iconfont;
+	src: url(../font/font_1419313818_3473415.ttf) format('truetype');
+}
+
+html,body {
+	height: 100%;
+	position: relative;
+	background: #2c2769;
+	overflow: hidden;
+}
+
+/*左侧侧滑菜单*/
+.left-nav {
+	width: 60%;
+	position: absolute;
+	top: 0;
+	left: -60%;
+	bottom: 0;
+	background: #666666;
+	color: #eeeeee;
+	line-height: 2.5em;
+	font-size: 0.85em;
+	transition: all 0.8s;
+}
+
+/*平移百分之六十*/
+#left-nav.navon {
+	transform: translateX(60%);
+}
+
+.left-nav h2 {
+	background: #444444;
+	font-weight: normal;
+	padding-left: 2em;
+}
+
+.left-nav li {
+	padding-left: 0.75em;
+	border-bottom: 1px solid #999999;
+}
+
+/*主内容区*/
+#main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 46px;
+	/*内容超出出现滚动条*/
+	overflow: auto;
+	transition: all 0.8s;
+	
+}
+
+/*平移百分之六十*/
+#main.navon {
+	transform: translateX(60%);
+}
+
+/*背景颜色渐变*/
+.bg {
+	background: -webkit-radial-gradient(center, ellipse cover, #dee6cf 0%, #4696ad 100%);
+}
+
+/*轮播图图片*/
+.swiper-slide img {
+	display: block;
+	width: 100%;
+}
+
+/*内容区*/
+#container {
+	width: 100%;
+	position: relative;
+}
+/*滚动字幕*/
+marquee {
+	font-size: 0.75em;
+	margin: 0.5em 0;
+}
+
+/*图片列表*/
+#container ul {
+	overflow: hidden;
+}
+
+#container ul li {
+	width: 44%;
+	margin-left: 4%;
+	margin-bottom: 1.5em;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+#container ul li img {
+	width: 100%;
+	display: block;
+}
+
+#container ul li .on {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#container ul li dl {
+	position: absolute;
+	
+	top: 0;
+	right: 1em;
+	color: #fff;
+	font-size: 0.75em;
+	padding-top: 1em;
+}
+
+#container ul li dl dt {
+	font-family: iconfont;
+}
+
+/*网页底部*/
+#footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+	background: #2c2769;
+	transition: all 0.8s;
+}
+
+#footer.navon {
+	transform: translateX(60%);
+}
+
+#footer a {
+	display: block;
+	color: #fff;
+	width: 33.33%;
+	text-align: center;
+	float: left;
+	padding: 0.2em 0;
+}
+
+#footer a b {
+	display: block;
+	font-family: iconfont;
+	font-weight: 400;
+	font-size: 1.5em;
+}
+
+#footer a i {
+	display: block;
+	font-size: 0.75em;
+	font-style: normal;
+} 
